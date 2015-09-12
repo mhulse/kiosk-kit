@@ -4,7 +4,8 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.5.2"
+    "gulp-sourcemaps": "^1.5.2",
+    "main-bower-files": "^2.9.0"
   },
   "scripts": {
     "gulp": "gulp"

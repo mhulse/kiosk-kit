@@ -1,70 +1,29 @@
 <!doctype html>
-<html lang=en>
+<html lang="en">
 <head>
-<meta charset=utf-8>
+<meta charset="utf-8"ou>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <title>blah</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-<style>
-	
-	*,
-	*::before,
-	*::after {
-		    -webkit-box-sizing: border-box;
-		       -moz-box-sizing: border-box;
-		        -ms-box-sizing: border-box;
-		         -o-box-sizing: border-box;
-		            box-sizing: border-box;
-	}
-	
-	html,
-	body { overflow-x: hidden; }
-	html {
-		height: 100%;
-		overflow-y: scroll;
-		position: relative;
-	}
-	body { min-height: 100%; }
-	
-	[kc="v1"] {
-		position: relative;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-	
-	[kc="v1"] > header,
-	[kc="v1"] > footer,
-	[kc="v1"] > main {
-		position: absolute;
-		width: 100%;
-	}
-	
-	[kc="v1"] > header,
-	[kc="v1"] > footer {
-		height: 50px;
-		background: red;
-	}
-	[kc="v1"] > header { top: 0; }
-	[kc="v1"] > footer { bottom: 0; }
-	
-	[kc="v1"] > main {
-		top: 70px;
-		bottom: 70px;
-		background: green;
-	}
-	
-</style>
+<link rel="stylesheet" href="../build/files/styles/css/main.css">
 </head>
-<body>
-<div kc="v1">
-	<header>Header</header>
-	<main>
-		<div kc-column="primary">A</div>
-		<div kc-column="sidebar secondary">B</div>
-		<div kc-column="sidebar tertiary">C</div>
+<body k="v1">
+	<header>
+		<h1 k-important>Header</h1>
+	</header>
+	<main k-row>
+		<section k-column>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales lacus ut cursus auctor. Ut a ex sit amet sapien lobortis convallis. Duis id maximus erat. Nam finibus venenatis cursus. Sed blandit diam et euismod porttitor. Ut porttitor accumsan euismod. Cras ut eleifend lacus. Aliquam elementum odio ut aliquam laoreet. Nam turpis tellus, finibus quis aliquam dapibus, porttitor vitae ex. Phasellus non nunc commodo, vestibulum erat pharetra, pretium turpis. Curabitur eget sem tristique, feugiat nisi eget, pellentesque magna.</p>
+		</section>
+		<nav k-column>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales lacus ut cursus auctor. Ut a ex sit amet sapien lobortis convallis. Duis id maximus erat. Nam finibus venenatis cursus. Sed blandit diam et euismod porttitor. Ut porttitor accumsan euismod. Cras ut eleifend lacus. Aliquam elementum odio ut aliquam laoreet. Nam turpis tellus, finibus quis aliquam dapibus, porttitor vitae ex. Phasellus non nunc commodo, vestibulum erat pharetra, pretium turpis. Curabitur eget sem tristique, feugiat nisi eget, pellentesque magna.</p>
+		</nav>
+		<aside k-column>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales lacus ut cursus auctor. Ut a ex sit amet sapien lobortis convallis. Duis id maximus erat. Nam finibus venenatis cursus. Sed blandit diam et euismod porttitor. Ut porttitor accumsan euismod. Cras ut eleifend lacus. Aliquam elementum odio ut aliquam laoreet. Nam turpis tellus, finibus quis aliquam dapibus, porttitor vitae ex. Phasellus non nunc commodo, vestibulum erat pharetra, pretium turpis. Curabitur eget sem tristique, feugiat nisi eget, pellentesque magna.</p>
+		</aside>
 	</main>
-	<footer>Footer</footer>
+	<footer>
+		<p>Footer</p>
+	</footer>
 </div>
 </body>
 </html>

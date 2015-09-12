@@ -74,5 +74,6 @@ sitemap.xml.gz*~
 # PROJECT-SPECIFIC #
 ####################
 
+bower_components
 node_modules
 npm-debug.log

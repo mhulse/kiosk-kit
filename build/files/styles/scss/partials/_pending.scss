@@ -1,0 +1,146 @@
+* {
+	
+	&,
+	&::before,
+	&::after {
+		    -webkit-box-sizing: border-box;
+		     -khtml-box-sizing: border-box;
+		       -moz-box-sizing: border-box;
+		        -ms-box-sizing: border-box;
+		         -o-box-sizing: border-box;
+		            box-sizing: border-box;
+	}
+	
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	   -khtml-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;
+	outline: 0;
+}
+
+html { height: 100%; }
+body { min-height: 100%; }
+
+html,
+body { overflow: hidden; }
+
+[k="v1"] {
+	
+	background: black;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	   -moz-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	
+	& > header {
+		
+		background: red;
+		
+		-webkit-flex: 0 0 auto;
+		   -moz-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		
+	}
+	
+	& > main {
+		
+		background: purple;
+		
+		-webkit-flex: 1 0 auto;
+		   -moz-flex: 1 0 auto;
+		    -ms-flex: 1 0 auto;
+		        flex: 1 0 auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		   -moz-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		
+		& > section {
+			
+			background: blue;
+			
+			-webkit-flex: 1;
+			   -moz-flex: 1;
+			    -ms-flex: 1;
+			        flex: 1;
+		}
+		
+		& > nav {
+			
+			background: pink;
+			
+			-webkit-flex: 0 0 200px;
+			   -moz-flex: 0 0 200px;
+			    -ms-flex: 0 0 200px;
+			        flex: 0 0 200px;
+			order: -1;
+			
+		}
+		
+		& > aside {
+			
+			background: yellow;
+			
+			-webkit-flex: 0 0 200px;
+			   -moz-flex: 0 0 200px;
+			    -ms-flex: 0 0 200px;
+			        flex: 0 0 200px;
+			
+		}
+		
+	}
+	
+	& > footer {
+		
+		background: green;
+		
+		-webkit-flex: 0 0 auto;
+		   -moz-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		
+	}
+	
+	[k-row] { margin: 0 -1em; }
+	[k-column] { padding: 0 1em; }
+	
+	[k-important] {
+		color: #fff;
+		letter-spacing: .05em;
+		text-shadow:
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000,
+			0 0 .1em #000;
+	}
+	
+	h1 {
+		font-size: 10vmin;
+		margin: 0;
+	}
+	
+}
