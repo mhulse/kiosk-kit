@@ -63,14 +63,19 @@ body { overflow: hidden; }
 		   -moz-flex: 1 0 auto;
 		    -ms-flex: 1 0 auto;
 		        flex: 1 0 auto;
+		
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: flex;
+		
 		-webkit-flex-direction: row;
 		   -moz-flex-direction: row;
 		    -ms-flex-direction: row;
 		        flex-direction: row;
+		
+		height: 0;
+		overflow-y: scroll;
 		
 		& > section {
 			
@@ -80,6 +85,7 @@ body { overflow: hidden; }
 			   -moz-flex: 1;
 			    -ms-flex: 1;
 			        flex: 1;
+			
 		}
 		
 		& > nav {
@@ -90,6 +96,7 @@ body { overflow: hidden; }
 			   -moz-flex: 0 0 200px;
 			    -ms-flex: 0 0 200px;
 			        flex: 0 0 200px;
+			
 			order: -1;
 			
 		}
