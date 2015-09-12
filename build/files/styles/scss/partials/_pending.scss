@@ -15,7 +15,11 @@ html { height: 100%; }
 body { min-height: 100%; }
 
 html,
-body { overflow: hidden; }
+body {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
 
 h3 {
 	font-size: 10vmin;
