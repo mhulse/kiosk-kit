@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	        -ms-box-sizing: border-box;
+	         -o-box-sizing: border-box;
+	            box-sizing: border-box;
+}
+
+html,
+body { overflow-x: hidden; }
+html {
+	height: 100%;
+	overflow-y: scroll;
+	position: relative;
+}
+body { min-height: 100%; }
+
+[kc="v1"] {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+[kc="v1"] > header,
+[kc="v1"] > footer,
+[kc="v1"] > main {
+	position: absolute;
+	width: 100%;
+}
+
+[kc="v1"] > header,
+[kc="v1"] > footer {
+	height: 50px;
+	background: red;
+}
+[kc="v1"] > header { top: 0; }
+[kc="v1"] > footer { bottom: 0; }
+
+[kc="v1"] > main {
+	top: 70px;
+	bottom: 70px;
+	background: green;
+}

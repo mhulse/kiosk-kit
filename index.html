@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>blah</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+<style>
+	
+	*,
+	*::before,
+	*::after {
+		    -webkit-box-sizing: border-box;
+		       -moz-box-sizing: border-box;
+		        -ms-box-sizing: border-box;
+		         -o-box-sizing: border-box;
+		            box-sizing: border-box;
+	}
+	
+	html,
+	body { overflow-x: hidden; }
+	html {
+		height: 100%;
+		overflow-y: scroll;
+		position: relative;
+	}
+	body { min-height: 100%; }
+	
+	[kc="v1"] {
+		position: relative;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	
+	[kc="v1"] > header,
+	[kc="v1"] > footer,
+	[kc="v1"] > main {
+		position: absolute;
+		width: 100%;
+	}
+	
+	[kc="v1"] > header,
+	[kc="v1"] > footer {
+		height: 50px;
+		background: red;
+	}
+	[kc="v1"] > header { top: 0; }
+	[kc="v1"] > footer { bottom: 0; }
+	
+	[kc="v1"] > main {
+		top: 70px;
+		bottom: 70px;
+		background: green;
+	}
+	
+</style>
+</head>
+<body>
+<div kc="v1">
+	<header>Header</header>
+	<main>
+		<div kc-column="primary">A</div>
+		<div kc-column="sidebar secondary">B</div>
+		<div kc-column="sidebar tertiary">C</div>
+	</main>
+	<footer>Footer</footer>
+</div>
+</body>
+</html>
