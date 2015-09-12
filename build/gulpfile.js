@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var bower = require('main-bower-files');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
 	
@@ -11,6 +12,7 @@ gulp.task('sass', function() {
 			outputStyle: 'compressed',
 		})
 		.on('error', sass.logError))
+		.pipe(autoprefixer())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('files/styles/css'));
 	
