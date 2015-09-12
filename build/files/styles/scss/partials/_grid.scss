@@ -6,31 +6,43 @@
 /* Flexbox container
 ------------------------------------------------------------------------------ */
 
-[kk-flex] { display: flex; } // *Immediate* children will become automatically flex items.
+[kk-flex]             { display: flex; } // *Immediate* children will become automatically flex items.
 [kk-flex ~= "inline"] { display: inline-flex; }
 
 [kk-flex],
-[kk-flex ~= "row"] { flex-direction: row; } // Default.
+[kk-flex ~= "row"]         { flex-direction: row; } // Default.
 [kk-flex ~= "row:reverse"] { flex-direction: row-reverse; }
 
-[kk-flex ~= "col"] { flex-direction: column; }
+[kk-flex ~= "col"]         { flex-direction: column; }
 [kk-flex ~= "col:reverse"] { flex-direction: column-reverse; }
 
 [kk-flex ~= "wrap"],
-[kk-flex ~= "wrap:nowrap"] { flex-wrap: nowrap; } // Default.
-[kk-flex ~= "wrap:wrap"] { flex-wrap: wrap; }
+[kk-flex ~= "wrap:nowrap"]  { flex-wrap: nowrap; } // Default.
+[kk-flex ~= "wrap:wrap"]    { flex-wrap: wrap; }
 [kk-flex ~= "wrap:reverse"] { flex-wrap: wrap-reverse; }
 
 [kk-flex ~= "justify"],
-[kk-flex ~= "justify:start"] { justify-content: flex-start; } // Default.
-[kk-flex ~= "justify:end"] { justify-content: flex-end; }
-[kk-flex ~= "justify:center"] { justify-content: center; }
+[kk-flex ~= "justify:start"]   { justify-content: flex-start; } // Default.
+[kk-flex ~= "justify:end"]     { justify-content: flex-end; }
+[kk-flex ~= "justify:center"]  { justify-content: center; }
 [kk-flex ~= "justify:between"] { justify-content: space-between; }
-[kk-flex ~= "justify:around"] { justify-content: space-around; }
+[kk-flex ~= "justify:around"]  { justify-content: space-around; }
 
-[kk-flex ~= "align"],
-[kk-flex ~= "align:stretch"] { align-items: stretch; } // Default.
-[kk-flex ~= "align:start"] { align-items: flex-start; }
-[kk-flex ~= "align:end"] { align-items: flex-end; }
-[kk-flex ~= "align:center"] { align-items: flex-center; }
-[kk-flex ~= "align:baseline"] { align-items: flex-baseline; }
+[kk-flex ~= "align:items"],
+[kk-flex ~= "align:items:stretch"]  { align-items: stretch; } // Default.
+[kk-flex ~= "align:items:start"]    { align-items: flex-start; }
+[kk-flex ~= "align:items:end"]      { align-items: flex-end; }
+[kk-flex ~= "align:items:center"]   { align-items: center; }
+[kk-flex ~= "align:items:baseline"] { align-items: baseline; }
+
+[kk-flex ~= "align:content"],
+[kk-flex ~= "align:content:stretch"]  { align-content: stretch; } // Default.
+[kk-flex ~= "align:content:start"]    { align-content: flex-start; }
+[kk-flex ~= "align:content:end"]      { align-content: flex-end; }
+[kk-flex ~= "align:content:center"]   { align-content: center; }
+[kk-flex ~= "align:content:between"]  { align-content: space-between; }
+[kk-flex ~= "align:content:araound"]  { align-content: space-around; }
+
+/* Flexbox items
+------------------------------------------------------------------------------ */
+

@@ -17,78 +17,24 @@ body { min-height: 100%; }
 html,
 body { overflow: hidden; }
 
-[k="v1"] {
-	
-	background: black;
-	display: flex;
-	flex-direction: column;
-	
-	& > header {
-		background: red;
-		flex: 0 0 auto;
-	}
-	
-	& > main {
-		
-		background: purple;
-		flex: 1 0 auto;
-		display: flex;
-		flex-direction: row;
-		height: 0;
-		overflow-y: scroll;
-		
-		& > section {
-			
-			background: blue;
-			flex: 1;
-			
-		}
-		
-		& > nav {
-			
-			background: pink;
-			flex: 0 0 200px;
-			order: -1;
-			
-		}
-		
-		& > aside {
-			background: yellow;
-			flex: 0 0 200px;
-		}
-		
-	}
-	
-	& > footer {
-		
-		background: green;
-		flex: 0 0 auto;
-		
-	}
-	
-	[k-row] { margin: 0 -1em; }
-	[k-column] { padding: 0 1em; }
-	
-	[k-important] {
-		color: #fff;
-		letter-spacing: .05em;
-		text-shadow:
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000,
-			0 0 .1em #000;
-	}
-	
-	h1 {
-		font-size: 10vmin;
-		margin: 0;
-	}
-	
+h3 {
+	font-size: 10vmin;
+	color: white;
+}
+
+[kk-type ~= "head"] {
+	color: #fff;
+	letter-spacing: .05em;
+	text-shadow:
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000,
+		0 0 .1em #000;
 }
