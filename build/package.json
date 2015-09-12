@@ -1,0 +1,12 @@
+{
+  "name": "kiosk-kit",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  }
+}
