@@ -6,43 +6,196 @@
 /* Flexbox container
 ------------------------------------------------------------------------------ */
 
-[kk-flex]             { display: flex; } // *Immediate* children will become automatically flex items.
-[kk-flex ~= "inline"] { display: inline-flex; }
+[kk-row]             { display: flex; } // *Immediate* children will become automatically flex items.
+[kk-row ~= "inline"] { display: inline-flex; }
 
-[kk-flex],
-[kk-flex ~= "row"]         { flex-direction: row; } // Default.
-[kk-flex ~= "row:reverse"] { flex-direction: row-reverse; }
+[kk-row],
+[kk-row ~= "row"]         { flex-direction: row; } // Default.
+[kk-row ~= "row:reverse"] { flex-direction: row-reverse; }
 
-[kk-flex ~= "col"]         { flex-direction: column; }
-[kk-flex ~= "col:reverse"] { flex-direction: column-reverse; }
+[kk-row ~= "col"]         { flex-direction: column; }
+[kk-row ~= "col:reverse"] { flex-direction: column-reverse; }
 
-[kk-flex ~= "wrap"],
-[kk-flex ~= "wrap:nowrap"]  { flex-wrap: nowrap; } // Default.
-[kk-flex ~= "wrap:wrap"]    { flex-wrap: wrap; }
-[kk-flex ~= "wrap:reverse"] { flex-wrap: wrap-reverse; }
+[kk-row ~= "wrap"],
+[kk-row ~= "wrap:nowrap"]  { flex-wrap: nowrap; } // Default.
+[kk-row ~= "wrap:wrap"]    { flex-wrap: wrap; }
+[kk-row ~= "wrap:reverse"] { flex-wrap: wrap-reverse; }
 
-[kk-flex ~= "justify"],
-[kk-flex ~= "justify:start"]   { justify-content: flex-start; } // Default.
-[kk-flex ~= "justify:end"]     { justify-content: flex-end; }
-[kk-flex ~= "justify:center"]  { justify-content: center; }
-[kk-flex ~= "justify:between"] { justify-content: space-between; }
-[kk-flex ~= "justify:around"]  { justify-content: space-around; }
+[kk-row ~= "justify"],
+[kk-row ~= "justify:start"]   { justify-content: flex-start; } // Default.
+[kk-row ~= "justify:end"]     { justify-content: flex-end; }
+[kk-row ~= "justify:center"]  { justify-content: center; }
+[kk-row ~= "justify:between"] { justify-content: space-between; }
+[kk-row ~= "justify:around"]  { justify-content: space-around; }
 
-[kk-flex ~= "align:items"],
-[kk-flex ~= "align:items:stretch"]  { align-items: stretch; } // Default.
-[kk-flex ~= "align:items:start"]    { align-items: flex-start; }
-[kk-flex ~= "align:items:end"]      { align-items: flex-end; }
-[kk-flex ~= "align:items:center"]   { align-items: center; }
-[kk-flex ~= "align:items:baseline"] { align-items: baseline; }
+[kk-row ~= "align:items"],
+[kk-row ~= "align:items:stretch"]  { align-items: stretch; } // Default.
+[kk-row ~= "align:items:start"]    { align-items: flex-start; }
+[kk-row ~= "align:items:end"]      { align-items: flex-end; }
+[kk-row ~= "align:items:center"]   { align-items: center; }
+[kk-row ~= "align:items:baseline"] { align-items: baseline; }
 
-[kk-flex ~= "align:content"],
-[kk-flex ~= "align:content:stretch"]  { align-content: stretch; } // Default.
-[kk-flex ~= "align:content:start"]    { align-content: flex-start; }
-[kk-flex ~= "align:content:end"]      { align-content: flex-end; }
-[kk-flex ~= "align:content:center"]   { align-content: center; }
-[kk-flex ~= "align:content:between"]  { align-content: space-between; }
-[kk-flex ~= "align:content:araound"]  { align-content: space-around; }
+[kk-row ~= "align:content"],
+[kk-row ~= "align:content:stretch"]  { align-content: stretch; } // Default.
+[kk-row ~= "align:content:start"]    { align-content: flex-start; }
+[kk-row ~= "align:content:end"]      { align-content: flex-end; }
+[kk-row ~= "align:content:center"]   { align-content: center; }
+[kk-row ~= "align:content:between"]  { align-content: space-between; }
+[kk-row ~= "align:content:araound"]  { align-content: space-around; }
 
 /* Flexbox items
 ------------------------------------------------------------------------------ */
 
+// Candidate for JS:
+[kk-row] > *,
+[kk-col] {
+	max-width: 100%;
+	flex-grow: 1; // Actual default is `0`.
+	flex-basis: 0; // Actual default is `auto`.
+}
+
+// Flex-shrink candidate for JS. Actual default is `1`.
+
+// Candidate for JS:
+[kk-col ~= "order"]       { order: 0; } // Default.
+[kk-col ~= "order:first"] { order: -1; }
+[kk-col ~= "order:last"]  { order: 1; }
+
+// 5ths-based units:
+[kk-col ~= "1/5"] {
+	flex-basis: 1/5 * 100%;
+	max-width: 1/5 * 100%;
+}
+[kk-col ~= "2/5"] {
+	flex-basis: 2/5 * 100%;
+	max-width: 2/5 * 100%;
+}
+[kk-col ~= "3/5"] {
+	flex-basis: 3/5 * 100%;
+	max-width: 3/5 * 100%;
+}
+[kk-col ~= "4/5"] {
+	flex-basis: 4/5 * 100%;
+	max-width: 4/5 * 100%;
+}
+
+// 24ths-based units:
+[kk-col ~= "1/24"] {
+	flex-basis: 1/24 * 100%;
+	max-width: 1/24 * 100%;
+}
+[kk-col ~= "1/12"],
+[kk-col ~= "2/24"] {
+	flex-basis: 1/12 * 100%;
+	max-width: 1/12 * 100%;
+}
+[kk-col ~= "1/8"],
+[kk-col ~= "3/24"] {
+	flex-basis: 1/8 * 100%;
+	max-width: 1/8 * 100%;
+}
+[kk-col ~= "1/6"],
+[kk-col ~= "4/24"] {
+	flex-basis: 1/6 * 100%;
+	max-width: 1/6 * 100%;
+}
+[kk-col ~= "5/24"] {
+	flex-basis: 5/24 * 100%;
+	max-width: 5/24 * 100%;
+}
+[kk-col ~= "1/4"],
+[kk-col ~= "6/24"] {
+	flex-basis: 1/4 * 100%;
+	max-width: 1/4 * 100%;
+}
+[kk-col ~= "7/24"] {
+	flex-basis: 7/24 * 100%;
+	max-width: 7/24 * 100%;
+}
+[kk-col ~= "1/3"],
+[kk-col ~= "8/24"] {
+	flex-basis: 1/3 * 100%;
+	max-width: 1/3 * 100%;
+}
+[kk-col ~= "3/8"],
+[kk-col ~= "9/24"] {
+	flex-basis: 3/8 * 100%;
+	max-width: 3/8 * 100%;
+}
+[kk-col ~= "5/12"],
+[kk-col ~= "10/24"] {
+	flex-basis: 5/12 * 100%;
+	max-width: 5/12 * 100%;
+}
+[kk-col ~= "11/24"] {
+	flex-basis: 11/24 * 100%;
+	max-width: 11/24 * 100%;
+}
+[kk-col ~= "1/2"],
+[kk-col ~= "12/24"] {
+	flex-basis: 1/2 * 100%;
+	max-width: 1/2 * 100%;
+}
+[kk-col ~= "13/24"] {
+	flex-basis: 13/24 * 100%;
+	max-width: 13/24 * 100%;
+}
+[kk-col ~= "7/12"],
+[kk-col ~= "14/24"] {
+	flex-basis: 7/12 * 100%;
+	max-width: 7/12 * 100%;
+}
+[kk-col ~= "5/8"] {
+	flex-basis: 5/8 * 100%;
+	max-width: 5/8 * 100%;
+}
+[kk-col ~= "5/8"],
+[kk-col ~= "15/24"] {
+	flex-basis: 5/8 * 100%;
+	max-width: 5/8 * 100%;
+}
+[kk-col ~= "2/3"],
+[kk-col ~= "16/24"] {
+	flex-basis: 2/3 * 100%;
+	max-width: 2/3 * 100%;
+}
+[kk-col ~= "17/24"] {
+	flex-basis: 17/24 * 100%;
+	max-width: 17/24 * 100%;
+}
+[kk-col ~= "3/4"],
+[kk-col ~= "18/24"] {
+	flex-basis: 3/4 * 100%;
+	max-width: 3/4 * 100%;
+}
+[kk-col ~= "19/24"] {
+	flex-basis: 19/24 * 100%;
+	max-width: 19/24 * 100%;
+}
+[kk-col ~= "5/6"],
+[kk-col ~= "20/24"] {
+	flex-basis: 5/6 * 100%;
+	max-width: 5/6 * 100%;
+}
+[kk-col ~= "7/8"],
+[kk-col ~= "21/24"] {
+	flex-basis: 7/8 * 100%;
+	max-width: 7/8 * 100%;
+}
+[kk-col ~= "11/12"],
+[kk-col ~= "22/24"] {
+	flex-basis: 11/12 * 100%;
+	max-width: 11/12 * 100%;
+}
+[kk-col ~= "23/24"] {
+	flex-basis: 23/24 * 100%;
+	max-width: 23/24 * 100%;
+}
+
+[kk-col ~= "1"],
+[kk-col ~= "1/1"],
+[kk-col ~= "5/5"],
+[kk-col ~= "24/24"] {
+	flex-basis: 100%;
+	max-width: 100%;
+}

@@ -10,6 +10,7 @@ gulp.task('sass', function() {
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed',
+			precision: 14,
 		})
 		.on('error', sass.logError))
 		.pipe(autoprefixer())
